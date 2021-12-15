@@ -31,6 +31,8 @@ declare module '@vue/reactivity' {
   }
 }
 
+// nodeOps 操作dom 相关的函数
+// patchProp 操作Attr 属性相关的
 const rendererOptions = extend({ patchProp }, nodeOps)
 
 // lazy create the renderer - this makes core renderer logic tree-shakable
@@ -71,8 +73,12 @@ export const createApp = ((...args) => {
     injectCompilerOptionsCheck(app)
   }
 
+  // 保存原始mount 复写mount
   const { mount } = app
   app.mount = (containerOrSelector: Element | ShadowRoot | string): any => {
+    // 判断宿主元素是否存在
+    // 并且取得宿主元素
+    // 如果为空则 return 
     const container = normalizeContainer(containerOrSelector)
     if (!container) return
 
@@ -99,6 +105,7 @@ export const createApp = ((...args) => {
     }
 
     // clear content before mounting
+    // 挂载之前清除模板
     container.innerHTML = ''
     const proxy = mount(container, false, container instanceof SVGElement)
     if (container instanceof Element) {

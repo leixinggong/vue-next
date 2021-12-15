@@ -1,0 +1,49 @@
+{
+	"files": [
+		{
+			"path": "packages/runtime-dom/src/index.ts",
+			"bookmarks": [
+				{
+					"line": 67,
+					"column": 17,
+					"label": "createApp  创建Vue实例"
+				}
+			]
+		},
+		{
+			"path": "packages/runtime-core/src/renderer.ts",
+			"bookmarks": [
+				{
+					"line": 318,
+					"column": 14,
+					"label": "初始化Vue 渲染函数"
+				},
+				{
+					"line": 2298,
+					"column": 11,
+					"label": "根节点 render 的渲染函数"
+				},
+				{
+					"line": 2334,
+					"column": 9,
+					"label": "createAppAPI  render 渲染出根节点"
+				}
+			]
+		},
+		{
+			"path": "packages/runtime-core/src/apiCreateApp.ts",
+			"bookmarks": [
+				{
+					"line": 176,
+					"column": 21,
+					"label": "createAppAPI"
+				},
+				{
+					"line": 277,
+					"column": 9,
+					"label": "原始 mount  函数"
+				}
+			]
+		}
+	]
+}
