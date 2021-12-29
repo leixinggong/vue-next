@@ -19,12 +19,27 @@
 					"label": "初始化Vue 渲染函数"
 				},
 				{
-					"line": 2298,
+					"line": 420,
+					"column": 16,
+					"label": "处理组件并且渲染"
+				},
+				{
+					"line": 1194,
+					"column": 20,
+					"label": "创建一个组件实例"
+				},
+				{
+					"line": 2300,
 					"column": 11,
 					"label": "根节点 render 的渲染函数"
 				},
 				{
-					"line": 2334,
+					"line": 2308,
+					"column": 0,
+					"label": "patch  开始第一次渲染根节点"
+				},
+				{
+					"line": 2337,
 					"column": 9,
 					"label": "createAppAPI  render 渲染出根节点"
 				}
@@ -42,6 +57,16 @@
 					"line": 277,
 					"column": 9,
 					"label": "原始 mount  函数"
+				}
+			]
+		},
+		{
+			"path": "packages/runtime-core/src/component.ts",
+			"bookmarks": [
+				{
+					"line": 581,
+					"column": 19,
+					"label": "处理组件的 Props 和  children"
 				}
 			]
 		}

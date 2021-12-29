@@ -1219,6 +1219,7 @@ function baseCreateRenderer(
       if (__DEV__) {
         startMeasure(instance, `init`)
       }
+      // 初始化Props 和  children
       setupComponent(instance)
       if (__DEV__) {
         endMeasure(instance, `init`)
@@ -1238,7 +1239,7 @@ function baseCreateRenderer(
       }
       return
     }
-
+    // 处理渲染副作用 处理生命周期函数
     setupRenderEffect(
       instance,
       initialVNode,
@@ -2296,12 +2297,14 @@ function baseCreateRenderer(
     return hostNextSibling((vnode.anchor || vnode.el)!)
   }
 
+  // 初次渲染根节点
   const render: RootRenderFunction = (vnode, container, isSVG) => {
     if (vnode == null) {
       if (container._vnode) {
         unmount(container._vnode, null, null, true)
       }
     } else {
+      // 第一次渲染根节点
       patch(container._vnode || null, vnode, container, null, null, null, isSVG)
     }
     flushPostFlushCbs()
