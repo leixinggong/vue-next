@@ -67,6 +67,11 @@
 					"line": 581,
 					"column": 19,
 					"label": "处理组件的 Props 和  children"
+				},
+				{
+					"line": 819,
+					"column": 11,
+					"label": "Vue2.x 执行声明周期函数 beforeCreate"
 				}
 			]
 		}
